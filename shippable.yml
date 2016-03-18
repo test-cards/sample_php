@@ -9,7 +9,7 @@ php:
 build:
  cache: true
  cache_dir_list: 
-    - $HOME/src/github.com/$REPO_NAME/composer.json
+    - $SHIPPABLE_BUILD_DIR/composer.json
  ci:
   - mkdir -p shippable/codecoverage
   - mkdir -p shippable/testresults
