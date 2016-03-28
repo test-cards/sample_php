@@ -9,7 +9,7 @@ php:
  
 branches:
  except:
-   - de*
+   - Dep*
   
 build:
  cache: true
