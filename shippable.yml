@@ -9,7 +9,7 @@ php:
  
 branches:
  except:
-   - /^(?i:deploy)-.*$/
+   - /^deploy-.*$/
   
 build:
  cache: true
