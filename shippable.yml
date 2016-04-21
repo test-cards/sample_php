@@ -1,6 +1,5 @@
 language: php
 
-
 php: 
   #- 5.3
  # - 5.4
@@ -9,7 +8,7 @@ php:
  
 branches:
  except:
-   - test*
+   - test
   
 build:
  cache: true
