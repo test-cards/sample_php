@@ -1,19 +1,17 @@
 language: php
 
 php: 
-  #- 5.3
-  - 5.4
+  - 5.6
   
   
-matrix:
-  include:
-    - php: 5.5
-      env: 
-        - foo=bar
 build:
- cache: true
+ #cache: true
  
  ci:
+  - currentLocation="$PWD"
+  - cd /tmp/pickle
+  - printf '\n' | bin/pickle install intl
+  - cd "$currentLocation"
   - mkdir -p shippable/codecoverage
   - mkdir -p shippable/testresults
   - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage tests/calculator_test.php
