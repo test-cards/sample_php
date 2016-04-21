@@ -7,14 +7,9 @@ php:
 build:
  cache: true
  cache_dir_list:
-   - $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/no-debug-non-zts-20121212
+    - $dirToCache
+    - $SHIPPABLE_BUILD_DIR/node_modules
 
-
-
- ci:
-  - echo $(phpenv version-name) 
-  - pickle install intl
-  - ls -a  $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/
-  - mkdir -p shippable/codecoverage
-  - mkdir -p shippable/testresults
-  - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage tests/calculator_test.php
+  ci:
+    - pickle install intl
+    - dirToCache=`ls $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/ | grep no-debug`
