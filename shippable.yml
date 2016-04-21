@@ -7,7 +7,7 @@ php:
 build:
  cache: true
  cache_dir_list:
-   - /root/.phpenv/versions/($version)/lib/php/extensions/no-debug-non-zts-20131226/
+   - /root/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/no-debug-non-zts-20131226/
 
 
  ci:
