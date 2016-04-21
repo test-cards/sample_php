@@ -16,4 +16,4 @@ build:
     - pickle install intl
     - dirToCache=`ls $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/ | grep no-debug`
     - echo $dirToCache
-    - ls $dirToCache
+   
