@@ -7,8 +7,9 @@ php:
 build:
  cache: true
  cache_dir_list:
-   - $SHIPPABLE_BUILD_DIR/
- 
+   - /root/.phpenv/versions/($version)/lib/php/extensions/no-debug-non-zts-20131226/
+
+
  ci:
   - pickle install intl
   - mkdir -p shippable/codecoverage
