@@ -13,7 +13,7 @@ build:
  ci:
   - echo $(phpenv version-name) 
   - pickle install intl
-  - cat $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/
+  - ls -a  $HOME/.phpenv/versions/$(phpenv version-name)/lib/php/extensions/
   - mkdir -p shippable/codecoverage
   - mkdir -p shippable/testresults
   - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage tests/calculator_test.php
