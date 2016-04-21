@@ -10,10 +10,7 @@ build:
    - $SHIPPABLE_BUILD_DIR/
  
  ci:
-  - currentLocation="$PWD"
-  - cd /tmp/pickle
-  - printf '\n' | bin/pickle install intl
-  - cd "$currentLocation"
+  - pickle install intl
   - mkdir -p shippable/codecoverage
   - mkdir -p shippable/testresults
   - phpunit  --log-junit shippable/testresults/junit.xml --coverage-xml shippable/codecoverage tests/calculator_test.php
